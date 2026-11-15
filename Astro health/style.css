@@ -1,0 +1,395 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #071426;
+    color: white;
+    min-height: 100vh;
+}
+
+/* LOGIN PAGE */
+
+.login-page {
+    background:
+        radial-gradient(circle at 50% 20%, #17466e, #071426 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-container h1 {
+    color: #00cfff;
+    font-size: 36px;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    color: #b5d9ed;
+    margin: 15px 0 30px;
+}
+
+.login-box {
+    background: rgba(23, 43, 73, 0.9);
+    border: 1px solid #00cfff;
+    border-radius: 18px;
+    padding: 35px 25px;
+    box-shadow: 0 0 25px rgba(0, 207, 255, 0.2);
+}
+
+.login-box h2 {
+    margin-bottom: 12px;
+}
+
+.login-box p {
+    color: #b5d9ed;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background: #071426;
+    border: 1px solid #00cfff;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #00cfff;
+}
+
+button {
+    background: #00cfff;
+    color: #071426;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #70e5ff;
+    box-shadow: 0 0 15px #00cfff;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #b5d9ed;
+}
+
+/* DASHBOARD */
+
+.dashboard-page {
+    background:
+        radial-gradient(circle at top right, #12395b, #071426 60%);
+}
+
+.navbar {
+    background: #102440;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00cfff;
+}
+
+.navbar h2 {
+    color: #00cfff;
+}
+
+.dashboard {
+    padding: 40px 5%;
+}
+
+.dashboard h1 {
+    color: #00cfff;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #b5d9ed;
+}
+
+.health-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 35px 0;
+}
+
+.card {
+    background: #172b49;
+    border: 1px solid #00cfff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 15px rgba(0,207,255,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,207,255,0.3);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    color: #00cfff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #b5d9ed;
+    font-size: 13px;
+}
+
+.mission-box,
+.alert-box {
+    background: #172b49;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    border-left: 4px solid #00cfff;
+}
+
+.mission-box p,
+.alert-box p {
+    margin-top: 12px;
+    color: #c5d9eb;
+}
+
+.update-button {
+    margin-top: 15px;
+}
+
+.note {
+    color: #9db8d1;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .health-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        padding: 25px 15px;
+    }
+
+    .navbar h2 {
+        font-size: 18px;
+    }
+
+    .login-container h1 {
+        font-size: 28px;
+    }
+}
+
+.graph-container {
+    background: #172b49;
+    border: 1px solid #00cfff;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.15);
+}
+
+.graph-container h2 {
+    color: #00cfff;
+    margin-bottom: 10px;
+}
+
+.graph-container p {
+    color: #b5d9ed;
+    margin-bottom: 20px;
+}
+
+.graph-container canvas {
+    width: 100% !important;
+    max-height: 350px;
+}
+.graph-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 300px !important;
+}
+.profile-card {
+  border: 1px solid #00cfff;
+  margin-top: 25px;
+  padding: 25px;
+}
+
+.profile-card h2 {
+  color: #00cfff;
+  margin-bottom: 20px;
+}
+
+.profile-details p {
+  color: #ffffff;
+  margin: 12px 0;
+  font-size: 16px;
+}
+/* NASA SPACE INFORMATION */
+
+.nasa-card {
+    margin-top: 25px;
+    padding: 25px;
+    border: 1px solid #00cfff;
+    background: #172b49;
+    border-radius: 15px;
+}
+
+.nasa-card h2 {
+    color: #00cfff;
+    margin-bottom: 15px;
+}
+
+.nasa-card h3 {
+    margin: 15px 0;
+    color: white;
+}
+
+.nasa-card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.nasa-card p {
+    color: #c5d9eb;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.nasa-card a {
+    display: inline-block;
+    color: #00cfff;
+    margin-top: 15px;
+}
+/* 3D EARTH DESIGN */
+.earth-card {
+    width: 100%;
+    margin: 25px auto;
+    padding: 25px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.earth-card h2 {
+    color: #00cfff;
+    margin-bottom: 15px;
+}
+
+#earthContainer {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #06152b;
+    border: 1px solid #00cfff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+#earth {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url("earth.jpg");
+    background-size: 200% 100%;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    box-shadow:
+    insetinset-25px-10px 40px #000,
+    0 0 25px #008cff,
+    0 0 50px #00cfff;
+    animation: rotateEarth 20s linear infinite;
+}
+
+@keyframes rotateEarth {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+/* SATELLITE TRACKING */
+
+.satellite-card {
+    margin-top: 25px;
+    padding: 25px;
+    background: #10233f;
+    border: 1px solid #00cfff;
+    border-radius: 15px;
+}
+
+.satellite-card h2 {
+    color: #00cfff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.satellite-card > p {
+    text-align: center;
+    color: white;
+}
+
+.satellite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.satellite-box {
+    padding: 20px;
+    background: #07152e;
+    border: 1px solid #008cff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.satellite-box h3 {
+    color: #00cfff;
+}
+
+.satellite-box p {
+    color: white;
+}
+
+.satellite-box span {
+    color: #70dfff;
+}

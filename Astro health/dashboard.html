@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASTROHEALTH | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <header class="navbar">
+        <h2>🚀 ASTROHEALTH</h2>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main class="dashboard">
+
+        <h1>Astronaut Health Dashboard</h1>
+        <p class="description">
+            Mission Control | Space Health Monitoring
+        </p>
+
+        <div class="health-cards">
+
+            <div class="card">
+                <h3>❤️ Heart Rate</h3>
+                <h2 id="heart">72 BPM</h2>
+                <p>Simulated reading</p>
+            </div>
+
+            <div class="card">
+                <h3>🫁 Oxygen Level</h3>
+                <h2 id="oxygen">98%</h2>
+                <p>Simulated reading</p>
+            </div>
+
+            <div class="card">
+                <h3>🌡️ Temperature</h3>
+                <h2 id="temperature">36.5 °C</h2>
+                <p>Simulated reading</p>
+            </div>
+
+        </div>
+
+        <div class="mission-box">
+            <h2>🌎 Mission Information</h2>
+            <p>Mission: AstroHealth Space Mission</p>
+            <p>Status: Active Demo</p>
+            <p>Monitoring: Simulated Data</p>
+        </div>
+
+        <div class="alert-box">
+            <h2>🚨 Health Notifications</h2>
+            <p id="alert">Waiting for demo readings...</p>
+        </div>
+
+        <button class="update-button" onclick="updateHealth()">
+            UPDATE HEALTH READINGS
+        </button>
+
+        <p class="note">
+            Note: All readings are simulated for demonstration.
+        </p>
+
+<div class="graph-container">
+    <h2>📈 Astronaut Heart Rate History</h2>
+    <p>Simulated heart rate readings (BPM)</p>
+
+    <canvas id="heartRateChart"></canvas>
+</div>
+<div class="card profile-card">
+  <h2>👨‍🚀 Astronaut Profile</h2>
+
+  <div class="profile-details">
+    <p><strong>Name:</strong> <span id="profileName">Guest Astronaut</span></p>
+    <p><strong>Astronaut ID:</strong> ASTRO-001</p>
+    <p><strong>Mission:</strong> Space Explorer 2026</p>
+    <p><strong>Location:</strong> International Space Station</p>
+    <p><strong>Mission Status:</strong> Active</p>
+  </div>
+</div>
+    </main>
+
+    <section class="card nasa-card">
+    <h2>🌌 NASA Astronomy Picture of the Day</h2>
+
+    <p id="nasaDate">Loading NASA information...</p>
+
+    <h3 id="nasaTitle">Loading space image...</h3>
+
+    <img id="nasaImage"
+         src=""
+         alt="NASA astronomy picture"
+         style="display:none;">
+
+    <p id="nasaExplanation">
+        Please wait while NASA information loads.
+    </p>
+
+    <a id="nasaLink"
+       href="https://science.nasa.gov/solar-system/"
+       target="_blank"
+       rel="noopener">
+       Explore Space
+    </a>
+</section>
+<!-- 3D EARTH EXPLORER -->
+<section class="card earth-card">
+
+    <h2>🌍 3D Earth Explorer</h2>
+
+    <p>Explore our planet from space</p>
+
+    <div id="earthContainer">
+        <p>3D Earth will load here.</p>
+    </div>
+
+</section>
+<div id="earthContainer">
+    <div id="earth"></div>
+</div>
+<!-- SATELLITE TRACKING SECTION -->
+
+<section class="card satellite-card">
+
+    <h2>🛰️ Satellite Tracking Dashboard</h2>
+
+    <p>Explore satellite mission information</p>
+
+    <div class="satellite-grid">
+
+        <div class="satellite-box">
+            <h3>ISS</h3>
+            <p>International Space Station</p>
+            <span>Low Earth Orbit</span>
+        </div>
+
+        <div class="satellite-box">
+            <h3>Hubble</h3>
+            <p>Hubble Space Telescope</p>
+            <span>Space Observatory</span>
+        </div>
+
+        <div class="satellite-box">
+            <h3>NOAA-20</h3>
+            <p>Weather Observation Satellite</p>
+            <span>Earth Observation</span>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
